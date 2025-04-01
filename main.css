@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 5% 10%;
+}
+
+/* Left Side Text */
+.text-section {
+    width: 45%;
+}
+
+.text-section h2 {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #27AE60;
+    font-weight: bold;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Rotating Circle (Half Visible at Bottom Left) */
+.rotating-circle {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: -175px; /* Moves half out of view */
+    left: 100px; /* Adjust position to the left */
+    overflow: hidden;
+}
+
+.rotating-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: rotate360 4s infinite linear;
+}
+
+
+
+/* Right Side Image */
+.image-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.features-section {
+    background: #0D1F12;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 5% 50px;
+    position: relative;
+}
+
+/* Title */
+.features-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Features Grid */
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* ERP Section  */
+.erp-section {
+    background: #0D1F12;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 50px;
+    position: relative;
+}
+
+/* Left Side - Text */
+.erp-content {
+    width: 50%;
+}
+
+.erp-subtitle {
+    color: #7bd87c;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.erp-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.erp-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.erp-list {
+    font-size: 18px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Right Side - Image */
+.erp-image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.erp-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Mobile Management Section */
+.mobile-section {
+    background: white;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 50px;
+    position: relative;
+}
+
+.mobile-content {
+    width: 45%;
+}
+
+.mobile-subtitle {
+    color: #0d810f;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.mobile-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.mobile-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.mobile-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.mobile-list li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mobile-list li::before {
+    content: "•";
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.mobile-image {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+    margin-top: 100px;
+}
+
+.mobile-image img {
+    max-width: 75%;
+    height: 60%;
+}
+
+
+
+/* 📌 Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: left;
+        height: auto;
+    }
+
+    .text-section {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Hide Rotating Circle on Mobile */
+    .rotating-circle {
+        display: none;
+    }
+
+    .features-section,
+    .erp-section {
+        min-height: auto;
+        padding: 60px 5%;
+    }
+
+    .features-section {
+        padding-bottom: 60px;
+    }
+
+    .erp-section {
+        padding-top: 0;
+    }
+
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Hide Circle on Mobile */
+    .features-section::before {
+        display: none;
+    }
+    
+    .erp-section {
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .erp-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .erp-image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mobile-section {
+        flex-direction: column;
+        padding: 60px 5%;
+        text-align: left;
+    }
+
+    .mobile-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .mobile-image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mobile-title {
+        font-size: 32px;
+    }
+
+    .scroll-animate {
+        transform: translateY(50px);
+    }
+
+    .scroll-animate.exit {
+        transform: translateY(-50px);
+    }
+}
+
+/* Animations */
+@keyframes rotate360 {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Animation Classes */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-animate.exit {
+    opacity: 0;
+    transform: translateY(-100px);
+}
