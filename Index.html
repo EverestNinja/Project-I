@@ -1,122 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flit2Go Layout</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #1a6a33;
+            overflow: hidden;
+            display: flex;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: rgb(238, 241, 240);
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #2d775f;
+            color: black;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            flex-grow: 1;
+        }
+    </style>
 </head>
 <body>
-    <section class="container">
-        <!-- Left Side: Text and Rotating Circle Below -->
-        <div class="text-section">
-            <h2>
-                Offer your customers the best multi-channel booking experience, 
-                while controlling your business operations with Flit2Go software.
-            </h2>
-            <p>
-                Transform the traditional rental service with reservation into a 
-                <strong>digitalized service for your customers and for the internal management of 
-                    your 
-                    company.</strong> 
-                Empower your business,
-                 increase your customers, and improve the rental service experience. 
-                Connect your fleet, optimize reservations, and expand traditional services to
-                 new ones such as flexible renting or subscriptions.
-            </p>
+    <div class="navbar">
+        <div class="logo">flit2GO technology</div>
+        <a href="#Home">Home</a>
+        <a href="#Solutions">Solutions</a>
+        <a href="#Technology">Technology</a>
+        <a href="#Integrations">Integrations</a>
+        <a href="#Company">Company</a>
+        <a href="#Blog">Blog</a>
+        <a href="#Digital Kit">Digital Kit</a>
+        <a href="#Request Demo">#Request Demo</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="top" align="center">
+        <h1><b>Car rental software</b></h1>
+        <p>Technology to digitize and manage vehicle booking</p>
+    <img src="C:\Users\Binay Jha\OneDrive\Desktop\barsha notes\car.jpg" height="100%" width="100%">
+    </div>
+    <div class="right"></div>
 
-            <!-- Rotating Circular Image -->
-            <div class="rotating-circle">
-                <img src="./Assets/Circulo_Web_Dark_B.png" alt="Rotating Element">
-            </div>
-        </div>
-
-        <!-- Right Side: Single Static Image -->
-        <div class="image-container">
-            <img src="./Assets/Alquiler_2023.webp" alt="Product Display" class="main-image scroll-animate">
-        </div>
-    </section>
-
-    <section class="features-section">
-        <h2 class="features-title">Technology that adapts to your business</h2>
+    <div class="socialmedia">
+        <i class="fa-brands fa-whatsapps"></i>
+    </div>
+    
         
-        <div class="features-container">
-            <div class="feature">
-                <i class="fa-solid fa-truck" style="font-size:48px;"></i>
-                <h3>CUSTOMIZABLE SOFTWARE</h3>
-                <p>For all types of vehicles for rent (cars, motorcycles, scooters, motorhomes,
-                     bicycles).</p>
-            </div>
-            
-            <div class="feature">
-                <i class="fa-solid fa-truck" style="font-size:48px;"></i>
-                <h3>AUTOMATION</h3>
-                <p>Manages the rental processes, from digital customer registration 
-                    (identification document) to the start and end of the rental 
-                    (photos of the vehicle).</p>
-            </div>
-    
-            <div class="feature">
-                <i class="fa-solid fa-truck" style="font-size:48px;"></i>
-                <h3>DIGITALIZATION</h3>
-                <p>Electronic invoices, digital reservations and deliveries, and online 
-                    contract signing.</p>
-            </div>
-    
-            <div class="feature">
-                <i class="fa-solid fa-truck" style="font-size:48px;"></i>
-                <h3>FOLLOW UP</h3>
-                <p>Data system integrated to an internal management platform, 
-                    to have all the information and metrics of the business in real time.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="erp-section">
-        <div class="erp-content">
-            <p class="erp-subtitle">Total control of your business</p>
-            <h2 class="erp-title">ERP for internal management</h2>
-            <p class="erp-description">
-                A platform that integrates all the <strong>metrics and information</strong>
-                 of the company to have real-time relevant data such as:
-            </p>
-            <ul class="erp-list">
-                <li>Billing.</li>
-                <li>Customer registration.</li>
-                <li>Contracts.</li>
-                <li>Booking calendar.</li>
-                <li>Condition of vehicles.</li>
-            </ul>
-        </div>
-
-        <div class="erp-image">
-            <img src="./Assets/Erp.webp" alt="ERP Dashboard" class="scroll-animate">
-        </div>
-    </section>
-
-    <section class="mobile-section">
-        <div class="mobile-content">
-            <p class="mobile-subtitle">Management and supervision in the palm of your hand</p>
-            <h2 class="mobile-title">Mobile<br>management app</h2>
-            <p class="mobile-description">
-                Application at hand for the operators of mobility companies to <strong>mobility
-                 companies control with the car rental and rental and vehicle reservation 
-                 processes</strong> such as:
-            </p>
-            <ul class="mobile-list">
-                <li>Check In and Check Out process of the rental.</li>
-                <li>Vehicle fleet status (location, mileage and fuel level).</li>
-                <li>Scheduling of cleaning and maintenance tasks.</li>
-                <li>ITV alarms and revisions.</li>
-            </ul>
-        </div>
-
-        <div class="mobile-image">
-            <img src="./Assets/tablet.png" alt="Mobile Management App Interface" class="scroll-animate">
-        </div>
-    </section>
-
-<script src="script.js"></script>
 </body>
 </html>
