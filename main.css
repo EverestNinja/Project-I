@@ -294,7 +294,7 @@ h2 {
 .integration-section .description {
     font-size: 18px;
     line-height: 1.6;
-    margin: 0 auto 40px;
+    
     max-width: 1000px;
     color: #333;
     text-align: center;
@@ -305,7 +305,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    margin-top: 40px;
+    margin-top: 5px;
 }
 
 .integration-section .text-content {
@@ -342,6 +342,7 @@ h2 {
     display: flex;
     justify-content: flex-start;
     max-width: 600px;
+    margin: 0 auto 40px;
 }
 
 .integration-section .image-container img {
