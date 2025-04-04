@@ -6,9 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #fff;
+    background-color: #ffffff;
     color: #333;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -51,10 +53,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    animation: rotate360 4s infinite linear;
+    animation: rotate360 10s infinite linear;
 }
-
-
 
 /* Right Side Image */
 .image-container {
@@ -69,6 +69,7 @@ body {
     height: auto;
 }
 
+/* Features Section */
 .features-section {
     background: #0D1F12;
     color: white;
@@ -78,17 +79,15 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 50px 5% 50px;
+    padding: 50px 5%;
     position: relative;
 }
-
 
 .features-title {
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 40px;
 }
-
 
 .features-container {
     display: flex;
@@ -115,7 +114,7 @@ body {
     margin: 0 auto;
 }
 
-/* ERP Section  */
+/* ERP Section */
 .erp-section {
     background: #0D1F12;
     color: white;
@@ -126,7 +125,6 @@ body {
     padding: 0 5% 50px;
     position: relative;
 }
-
 
 .erp-content {
     width: 50%;
@@ -156,7 +154,6 @@ body {
     padding-left: 20px;
 }
 
-
 .erp-image {
     width: 50%;
     display: flex;
@@ -167,8 +164,6 @@ body {
     max-width: 100%;
     height: auto;
 }
-
-
 
 /* Mobile Management Section */
 .mobile-section {
@@ -235,9 +230,151 @@ body {
     height: 60%;
 }
 
+/* Reservation Section */
+.reservation-section {
+    padding: 80px 20px;
+    text-align: center;
+}
 
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
 
-/* 📌 Responsive Styles */
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.channel {
+    text-align: center;
+    width: 280px;
+}
+
+.channel img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.channel img[alt="Mobile App"] {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+}
+
+.channel p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Integration Section */
+.integration-section {
+    padding: 80px 5%;
+    background: white;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.integration-section h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center;
+}
+
+.integration-section .description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto 40px;
+    max-width: 1000px;
+    color: #333;
+    text-align: center;
+}
+
+.integration-section .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.integration-section .text-content {
+    flex: 1;
+    max-width: 500px;
+    padding-right: 20px;
+}
+
+.integration-section .features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.integration-section .features li {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.integration-section .features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+.integration-section .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 600px;
+}
+
+.integration-section .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes rotate360 {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.rotating-circle img {
+    animation: rotate360 10s infinite linear;
+}
+
+/* Image Scroll Animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -245,16 +382,22 @@ body {
         height: auto;
     }
 
-    .text-section {
+    .text-section,
+    .image-container,
+    .erp-content,
+    .erp-image,
+    .mobile-content,
+    .mobile-image,
+    .integration-section .text-content,
+    .integration-section .image-container {
         width: 100%;
     }
 
     .image-container {
-        width: 100%;
         margin-top: 20px;
     }
 
-     .rotating-circle {
+    .rotating-circle {
         display: none;
     }
 
@@ -262,14 +405,6 @@ body {
     .erp-section {
         min-height: auto;
         padding: 60px 5%;
-    }
-
-    .features-section {
-        padding-bottom: 60px;
-    }
-
-    .erp-section {
-        padding-top: 0;
     }
 
     .features-container {
@@ -282,74 +417,59 @@ body {
         margin-bottom: 30px;
     }
 
-    
-    .features-section::before {
-        display: none;
-    }
-    
-    .erp-section {
-        flex-direction: column;
-        text-align: left;
-    }
-    
-    .erp-content {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .erp-image {
-        width: 100%;
-        justify-content: center;
-    }
-
+    .erp-section,
     .mobile-section {
         flex-direction: column;
-        padding: 60px 5%;
         text-align: left;
+        padding: 60px 5%;
     }
 
+    .erp-content,
     .mobile-content {
-        width: 100%;
         margin-bottom: 40px;
-    }
-
-    .mobile-image {
-        width: 100%;
-        justify-content: center;
     }
 
     .mobile-title {
         font-size: 32px;
     }
 
-    .scroll-animate {
-        transform: translateY(50px);
+    .reservation-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .scroll-animate.exit {
-        transform: translateY(-50px);
+    .channel {
+        width: 90%;
     }
-}
 
-/* Animations */
-@keyframes rotate360 {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(0deg); }
-}
+    .channel img {
+        height: 160px;
+    }
 
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.6s ease-out;
-}
+    .integration-section {
+        padding: 40px 20px;
+        min-height: auto;
+    }
 
-.scroll-animate.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .integration-section h2 {
+        font-size: 32px;
+    }
 
-.scroll-animate.exit {
-    opacity: 0;
-    transform: translateY(-100px);
+    .integration-section .description {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .integration-section .content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .integration-section .features {
+        padding: 0 20px;
+    }
+
+    .integration-section .features li {
+        font-size: 16px;
+    }
 }
